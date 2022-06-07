@@ -1,7 +1,7 @@
 require 'date'
 
 class User < ApplicationRecord
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -9,11 +9,13 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :birth_date, presence: true, if: :adult?
+  validate :adult
 
-  def adult?
+  def adult
     today = Date.today
-    age = today.year - birth_date
-    return age >= 18
+    age = today.year - birth_date.year
+    if birth_date.present? && age < 18
+      errors.add(:birth_date, "You're to young to comme here")
+    end
   end
 end
