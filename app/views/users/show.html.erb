@@ -1,10 +1,10 @@
 <br>
 <div class="container">
   <div>
-    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+    <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
   </div>
     <ul class="list-group">
-      <% @user.booking.each do |booking| %>
+      <% current_user.bookings.each do |booking| %>
         <li class="list-group-item">
         <strong><%= booking.service.name %></strong>
         <br>
@@ -19,6 +19,6 @@
   </div>
   <div class="bouton">
     <%# il faudra probablement changer le path %>
-    <%= link_to 'reserve an other Charlie', new_user_booking_path(@user) %>
+    <%= link_to 'reserve an other Charly', new_booking_path %>
   </div>
 </div>
