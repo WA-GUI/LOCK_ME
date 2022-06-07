@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+.home_container {
+  width: 100%;
+  background-image: url(mustang.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+}
+
+
+.bouton_lock_me {
+  border: 4px solid red;
+  background-color: white;
+  width: 220px;
+  padding: 15px 20px;
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
+
+}
