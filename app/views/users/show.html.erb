@@ -1,0 +1,24 @@
+<br>
+<div class="container">
+  <div>
+    <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+  </div>
+    <ul class="list-group">
+      <% current_user.bookings.each do |booking| %>
+        <li class="list-group-item">
+        <strong><%= booking.service.name %></strong>
+        <br>
+        <%= booking.date %>
+        <%# pour cancel le booking
+        <br>
+        <br>
+        <%= link_to "Cancel this booking", booking_path(booking),
+        method: :delete, data: { confirm: "Are you sure?" } %\></li> %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="bouton">
+    <%# il faudra probablement changer le path %>
+    <%= link_to 'reserve an other Charly', new_booking_path %>
+  </div>
+</div>

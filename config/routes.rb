@@ -5,8 +5,10 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :users do
-    resources :booking, only: [:index, :new, :create]
-  end
-  resources :booking, only: :destroy
+  # resources :users do
+  #   resources :booking, only: [:index, :new, :create]
+  # end
+  get "users", to: "users#show"
+  resources :bookings
+  resources :services, only: [:index, :show]
 end
