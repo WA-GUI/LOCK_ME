@@ -8,7 +8,7 @@
         <li class="list-group-item">
         <strong><%= booking.service.name %></strong>
         <br>
-        <%= booking.date %>
+        <%#= booking.date %>
         <%# pour cancel le booking
         <br>
         <br>
@@ -18,5 +18,7 @@
     </ul>
   </div>
   <%# il faudra probablement changer le path %>
-  <%= link_to 'reserve an other Charly', new_booking_path, class: "bouton-user" %>
+  <a class="bouton-user" href="/services">
+  <strong>LOCK ME</strong> more !
+  </a>
 </div>
