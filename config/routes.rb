@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   # end
   get "users", to: "users#show"
   resources :bookings
-  resources :services, only: [:index, :show]
+  resources :services, only: [:show, :index]
 end
