@@ -1,23 +1,26 @@
-<br>
-<div class="container">
-  <div>
-    <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+<div class="bckg">
+  <div class="container user-page">
+    <div>
+      <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+    </div>
+      <ul class="list-group">
+        <% current_user.bookings.each do |booking| %>
+          <li class="list-group-item">
+            <h2><strong><%= booking.service.name %></strong></h2>
+            <strong><%= booking.service.tagligne %></strong>
+            <%= booking.date %>
+            <br>
+            <br>
+            <%= link_to "Unlock this", booking_path(booking),
+              method: :delete, data: { confirm: "Are you sure?" }, class: "bouton-all" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <a class="bouton-all" href="/services">
+      <strong>LOCK ME</strong> more !
+    </a>
   </div>
-    <ul class="list-group">
-      <% current_user.bookings.each do |booking| %>
-        <li class="list-group-item">
-        <strong><%= booking.service.name %></strong>
-        <br>
-        <%= booking.date %>
-        <br>
-        <br>
-        <%= link_to "Cancel this booking", booking_path(booking),
-        method: :delete, data: { confirm: "Are you sure?" } %></li>
-      <% end %>
-    </ul>
-  </div>
-  <%# il faudra probablement changer le path %>
-  <a class="bouton-user" href="/services">
-  <strong>LOCK ME</strong> more !
-  </a>
 </div>
