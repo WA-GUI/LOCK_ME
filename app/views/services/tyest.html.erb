@@ -1,0 +1,36 @@
+<div class="bckg">
+  <div class="index-description">
+    <h1>Choose the Service you want to <strong>LOCK ME!</strong></h1>
+  </div>
+
+  <div class="d-flex flex-wrap">
+    <div class="container">
+      <% l = @services.length %>
+      <% (0...l).each do |i| %>
+        <% if i % 3 == 0 %>
+          <div class="row mb-4">
+        <% end %>
+          <%# @services.each do |service| %>
+          <%# <div class="row mb-4"> %>
+          <div class="col-sm-4 justify-content-between">
+            <div class="card-trip mb-4">
+              <%= image_tag "#{@services[i].photo}" %>
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= @services[i].name %></h2>
+                  <p>Ménage / repassage</p>
+                </div>
+                <h2 class="card-trip-pricing"><%= @services[i].price %></h2>
+              </div>
+
+            </div>
+          </div>
+
+        <% if i % 3 == 2 || i == (l - 1) %>
+
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
