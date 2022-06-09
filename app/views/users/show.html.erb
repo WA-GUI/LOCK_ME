@@ -7,7 +7,7 @@
         <% current_user.bookings.each do |booking| %>
           <li class="list-group-item">
             <h2><strong><%= booking.service.name %></strong></h2>
-            <strong><%= booking.tagligne %></strong>
+            <strong><%= booking.service.tagligne %></strong>
             <%= booking.date %>
             <br>
             <br>
