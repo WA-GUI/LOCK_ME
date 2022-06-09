@@ -12,3 +12,10 @@
 @import "components/index";
 @import "pages/index";
 @import "services/index";
+@import "bookings/index";
+@import "users/index";
+
+
+body {
+  min-height: 100vh;
+}
