@@ -1,15 +1,16 @@
-<h1> CHOSE YOUR CHARLY !</h1>
-<br>
-<div class="container">
-  <%= simple_form_for([@service, @booking]) do |f| %>
-    <%# lien avec la bd de film à faire -> ?  :collection => ["", ""], :prompt => "Select a category" %>
-    <%#= f.association :service, value: @service.id%>
-    <%#= f.input :date %>
-    <%= f.input :date %>
-    <%= f.submit %>
-  <% end %>
-</div>
-<%# <param name="service_id" value=@service> %>
-<div class="bouton">
-  <%= link_to "back to userpage", users_path(current_user) %>
+<div class="bckg">
+  <h1 id="take"> TAKE YOUR CHARLY !</h1>
+  <br>
+  <div class="container booking-page">
+    <%= simple_form_for([@service, @booking]) do |f| %>
+      <%= f.input :date %>
+      <%= f.button :submit, "LOCK THIS!", class: "bouton-all" %>
+    <% end %>
+    <br>
+    <br>
+    <br>
+    <div class="bouton">
+      <%= link_to "back to userpage", users_path(current_user), class: "bouton-all" %>
+    </div>
+  </div>
 </div>
