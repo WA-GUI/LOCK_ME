@@ -8,12 +8,11 @@
         <li class="list-group-item">
         <strong><%= booking.service.name %></strong>
         <br>
-        <%#= booking.date %>
-        <%# pour cancel le booking
+        <%= booking.date %>
         <br>
         <br>
         <%= link_to "Cancel this booking", booking_path(booking),
-        method: :delete, data: { confirm: "Are you sure?" } %\></li> %>
+        method: :delete, data: { confirm: "Are you sure?" } %></li>
       <% end %>
     </ul>
   </div>

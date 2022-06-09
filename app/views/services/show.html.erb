@@ -8,7 +8,7 @@
   </div>
 
   <div class="flex-column row justify-content-center ">
-    <%= link_to "LOCK ME!", "#", data: { confirm: "WELCOME TO THE PARADISE" }, class: "btn btn-danger mb-4"%>
+    <%= link_to "LOCK ME!", new_service_booking_path(@service), data: { confirm: "WELCOME TO THE PARADISE" }, class: "btn btn-danger mb-4"%>
     <h5>price: <strong><%= @service.price %>€<strong></h5>
     <p><%= @service.description %></p>
   </div>

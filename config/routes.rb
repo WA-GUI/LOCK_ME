@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   #   resources :booking, only: [:index, :new, :create]
   # end
   get "users", to: "users#show"
-  resources :bookings
-  resources :services, only: [:show, :index]
+  # get "/bookings/new", to: "bookings#new"
+
+  # , only: [:new, :destroy]
+  resources :services, only: [:show, :index] do
+    resources :bookings, only: [:new, :create]
+  end
+  resources :bookings, only: [:destroy]
 end

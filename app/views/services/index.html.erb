@@ -2,6 +2,7 @@
   <div class="index-description">
     <h1>Choose the Service you want to <strong>LOCK ME!</strong></h1>
   </div>
+
   <div class="d-flex flex-wrap">
     <div class="container">
       <% l = @services.length %>
@@ -21,9 +22,12 @@
                 </div>
                 <h2 class="card-trip-pricing"><%= @services[i].price %></h2>
               </div>
+
             </div>
           </div>
+
         <% if i % 3 == 2 || i == (l - 1) %>
+
           </div>
         <% end %>
       <% end %>
