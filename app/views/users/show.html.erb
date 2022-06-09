@@ -12,15 +12,17 @@
             <br>
             <br>
             <%= link_to "Unlock this", booking_path(booking),
-              method: :delete, data: { confirm: "Are you sure?" }, class: "bouton-all" %>
+              method: :delete, data: { confirm: "Are you sure?" }, class: "bouton-unlock" %>
           </li>
         <% end %>
       </ul>
     </div>
     <br>
     <br>
-    <a class="bouton-all" href="/services">
-      <strong>LOCK ME</strong> more !
-    </a>
+    <div class="more">
+      <a class="bouton-all" href="/services">
+        <strong>LOCK ME</strong> more !
+      </a>
+    </div>
   </div>
 </div>

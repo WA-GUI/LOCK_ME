@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Booking.destroy_all
 Service.destroy_all
 Service.create(name: "Cleaning", price: 100, tagligne: "J'astique votre intérieur sans fin !", photo: "charly-cleaning", description: "La propreté est un critère primordial pour moi, je propose donc mes services pour effectuer le nettoyage de votre intérieur, du sol au plafond, avec mes outils manuels et mes outils robotisés selon votre envie. J'aime commencer par l'avant mais si vous avez une préférence autre, je suivrais vos directives avec énergie et dévouement.")
 Service.create(name: "Cooking", price: 100, tagligne: "Laissez moi ravir vos papilles !", photo: "cooking", description: "Je vous propose une aventure culinaire étonnante, vos papille en seront toutes exitées, mes ingrédients de prédilection sont le chocolat, les fraises, le champagne ou encore l'huile de coco pour les envies les plus tropicales...")
