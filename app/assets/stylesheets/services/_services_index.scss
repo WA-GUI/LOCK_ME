@@ -1,13 +1,36 @@
+.center-description {
+  width: 100%;
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+
 .index-description {
   display: flex;
-  text-align: center;
-  justify-content: center;
+  // text-align: center;
+  // justify-content: center;
   padding-bottom: 15px;
   padding-top: 15px;
   color: #4F4F4F;
 }
+.index-description h1{
 
+  transition: 0.2s;
+}
 
+.index-description h1:hover{
+  // display: flex;
+  // text-align: center;
+  // justify-content: center;
+  // padding-bottom: 15px;
+  // padding-top: 15px;
+  color: #FF0000;
+  transition: 0.2s;
+}
+h1 {
+  background-image: linear-gradient(to right left, #FF0000, #4F4F4F);
+}
 .card-trip {
   overflow: hidden;
   background: white;
