@@ -1,0 +1,13 @@
+.picsdetails{
+    object-fit: contain;
+}
+
+.button-size{
+    width: 150px;
+}
+
+.mygrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}

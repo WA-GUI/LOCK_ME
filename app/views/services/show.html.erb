@@ -1,14 +1,13 @@
 
-<h1><%= @service.name.upcase %></h1>
-<div class="d-flex flex-row space-between ">
+<h1 class="text-center"><%= @service.name.upcase %></h1>
+<div class="d-flex flex-row space-between justify-content-center ">
 
-  <div class="d-flex p-3" >
-  <%= image_tag "#{@service.photo}" %>
-    <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" class="rounded float-left"  height="450px" alt="...">
+  <div class="d-flex p-3">
+   <%= image_tag "#{@service.photo}", size:"450x450", class: "picsdetails" %>
   </div>
 
-  <div class="flex-column row justify-content-center ">
-    <%= link_to "LOCK ME!", new_service_booking_path(@service), data: { confirm: "WELCOME TO THE PARADISE" }, class: "btn btn-danger mb-4"%>
+  <div class="flex-column row justify-content-center align-items-center">
+    <%= link_to "LOCK ME!", new_service_booking_path(@service), data: { confirm: "WELCOME TO THE PARADISE" }, class: "btn btn-danger mb-4 button-size"%>
     <h5>price: <strong><%= @service.price %>€<strong></h5>
     <p><%= @service.description %></p>
   </div>
