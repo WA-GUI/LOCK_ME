@@ -11,8 +11,8 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
   <body>
+
   <% unless controller_name == "pages" && action_name == "home"%>
   <%= render "shared/nav-bar" %>
   <% end %>
