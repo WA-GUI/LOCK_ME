@@ -11,56 +11,9 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
   <body>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          <%= image_tag "logo_lkm.png", class:"logo-image" %>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-
-                <% if user_signed_in? %>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/users">
-                      <%= current_user.first_name %> <%= current_user.last_name %>
-                    </a>
-                  </li>
-                  <li class="nav-item active">
-                    <%= link_to "Log out", destroy_user_session_path, :method => :delete, class: "nav-link" %>
-                  </li>
-                <% else %>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/users/sign_in">
-                      Log-in
-                    </a>
-                  </li>
-                <% end %>
-              <li class="nav-item dropdown">
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                </div>
-              </li>
-              <!--li class="nav-item"-->
-              <!--/li-->
-          </ul>
-        </div>
-      </div>
-    </div>
 
     <%= yield %>
-    <div id="footer">
-      <ul>
-        <a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-      </ul>
-    </div>
+
   </body>
 </html>

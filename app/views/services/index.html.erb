@@ -1,94 +1,32 @@
-<div class="bckg">*
+<div class="bckg">
   <div class="index-description">
-  <h1>Choose the Service you want to <strong>LOCK ME!</strong></h1>
+    <h1>Choose the Service you want to <strong>LOCK ME!</strong></h1>
   </div>
-  <div class="container .d-sm-flex">
-    <div class="row mb-4">
-      <div class="col-sm">
-        <div class="card-trip mb-4">
-          <%= image_tag "cleaning.webp" %>
-          <div class="card-trip-infos">
-            <div>
-              <h2>Cleaning</h2>
-              <p>Ménage / repassage</p>
+  <div class="d-flex flex-wrap">
+    <div class="container">
+      <% l = @services.length %>
+      <% (0...l).each do |i| %>
+        <% if i % 3 == 0 %>
+          <div class="row mb-4">
+        <% end %>
+          <%# @services.each do |service| %>
+          <%# <div class="row mb-4"> %>
+          <div class="col-sm-4 justify-content-between">
+            <div class="card-trip mb-4">
+              <%= image_tag "#{@services[i].photo}" %>
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= @services[i].name %></h2>
+                  <p>Ménage / repassage</p>
+                </div>
+                <h2 class="card-trip-pricing"><%= @services[i].price %></h2>
+              </div>
             </div>
-            <h2 class="card-trip-pricing"><%="€100"%></h2>
-            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
           </div>
-        </div>
-      </div>
-      <div class="col-sm">
-        <div class="card-trip mb-4">
-
-          <%= image_tag "cooking.jpg" %>
-          <div class="card-trip-infos">
-            <div>
-            <a class="button-user" href="/services/2">
-              <h2>Cooking</h2>
-              </a>
-              <p>Vous allez saliver !</p>
-            </div>
-            <h2 class="card-trip-pricing"><%="€100"%></h2>
-            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
+        <% if i % 3 == 2 || i == (l - 1) %>
           </div>
-        </div>
-      </div>
-
-      <div class="col-sm">
-          <div class="card-trip mb-4">
-      <%= image_tag "sushi.webp" %>
-      <div class="card-trip-infos">
-        <div>
-        <h2>Body Sushi</h2>
-        <p>Consommez sans modération</p>
-        </div>
-        <h2 class="card-trip-pricing"><%="€100"%></h2>
-        <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mb-4">
-      <div class="col-sm">
-        <div class="card-trip mb-4">
-          <%= image_tag "coach.jpg" %>
-          <div class="card-trip-infos">
-
-            <div>
-              <h2>Coach Sportif</h2>
-              <p>Sculptez votre summer body</p>
-            </div>
-            <h2 class="card-trip-pricing"><%="€250"%></h2>
-            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
-          </div>
-        </div>
-      </div>
-    <div class="col-sm">
-      <div class="card-trip mb-4">
-        <%= image_tag "massage.jpg" %>
-        <div class="card-trip-infos">
-          <div>
-            <h2>Body Massage</h2>
-            <p>Après l'effort... ...beaucoup de réconfort</p>
-          </div>
-          <h2 class="card-trip-pricing"><%="€150"%></h2>
-          <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm">
-      <div class="card-trip mb-4">
-      <%= image_tag "dance.jpg" %>
-      <div class="card-trip-infos">
-        <div>
-          <h2>Private Dance</h2>
-          <p>Avec ou sans vêtements !</p>
-          </div>
-        <h2 class="card-trip-pricing"><%="€200"%></h2>
-        <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
-      </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
