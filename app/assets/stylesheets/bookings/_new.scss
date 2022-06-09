@@ -1,0 +1,20 @@
+.bouton-booking {
+  background-color: red;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.bouton-booking:hover {
+  background-color: rgb(161, 7, 7);
+  color: lightgray;
+}
+
+.booking-page {
+  height: 75vh;
+  color: white;
+}
+
+#take {
+  color: red;
+  margin-left: 15px;
+}
