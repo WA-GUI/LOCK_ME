@@ -2,24 +2,24 @@
   <div class="container user-page">
     <div>
       <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+      <p><%= current_user.email %></p>
     </div>
       <ul class="list-group">
         <% current_user.bookings.each do |booking| %>
           <li class="list-group-item">
             <h2><strong><%= booking.service.name %></strong></h2>
-            <strong><%= booking.service.tagligne %></strong>
             <%= booking.date %>
             <br>
+            <strong><%= booking.service.tagligne %></strong>
             <br>
             <%= link_to "Unlock this", booking_path(booking),
               method: :delete, data: { confirm: "Are you sure?" }, class: "bouton-unlock" %>
           </li>
         <% end %>
       </ul>
-    </div>
     <br>
     <br>
-    <div class="more">
+    <div class="bouton">
       <a class="bouton-all" href="/services">
         <strong>LOCK ME</strong> more !
       </a>

@@ -10,11 +10,22 @@
 }
 
 .booking-page {
+  position: relative;
   height: 75vh;
   color: white;
 }
 
+.lock-this {
+  position: absolute;
+  left: 50%;
+  transform: translate(-65px, 20px);
+}
+
 #take {
   color: red;
-  margin-left: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 0 0;
 }
