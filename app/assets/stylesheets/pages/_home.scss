@@ -13,19 +13,26 @@
 
 }
 
+.bouton_lock_me img {
+  position: relative;
+    top: -104%;
+}
 
 .bouton_lock_me {
-  border: 1px solid #950101e6;
-  border-radius: 4px;
+  // border: 1px solid #950101e6;
+  position: absolute;
+  border-radius: 12px;
   background-color: #950101;
   color:#C6C6C6;
   font-weight: bolder;
   text-decoration: none;
-  box-shadow: 2px 2px 2px;
-  width: 290px;
-  padding: 15px 20px;
+  box-shadow: 1px 1px 20px;
+  width: 363px;
+  height: 53px;
+  // padding: 15px 20px;
   text-align: center;
-  transform: translateY(248%);
+  transform: translate(5%,182%);
+  transition: 0.9s;
 
   h1 {
     margin: 0;
@@ -33,15 +40,16 @@
 }
 
 .bouton_lock_me:hover{
-  background-color: #FF0000;
-  border: 1px solid #FF0000;
+  background-color: #FF000000;
+  // border: 1px solid #FF0000;
   color:#C6C6C6;
-
+  box-shadow: none;
 
 }
 
 
 #footer {
+
   background: black;
   color: white;
   font-size: 15px;
@@ -65,8 +73,4 @@
 
 #footer a:hover{
   color: #FF0000;
-}
-
-.dix-huit {
-  color: white
 }
