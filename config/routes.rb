@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #   resources :booking, only: [:index, :new, :create]
   # end
   get "users", to: "users#show"
-  # get "/bookings/new", to: "bookings#new"
+  get "services/:id/bookings/:id/resa", to: "bookings#resa", as: "resa"
 
   # , only: [:new, :destroy]
   resources :services, only: [:show, :index] do
