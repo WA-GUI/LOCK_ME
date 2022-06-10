@@ -7,7 +7,7 @@
   </div>
 
   <div class="flex-column row justify-content-center align-items-center">
-    <%= link_to "LOCK ME!", new_service_booking_path(@service), data: { confirm: "WELCOME TO THE PARADISE" }, class: "btn btn-danger mb-4 button-size"%>
+    <%= link_to "LOCK ME!", new_service_booking_path(@service), class: "btn btn-danger mb-4 button-size"%>
     <h5 style="color:white">price: <strong><%= @service.price %>€<strong></h5>
     <p style="color:white"><%= @service.description %></p>
   </div>

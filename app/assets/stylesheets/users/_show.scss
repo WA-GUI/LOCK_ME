@@ -1,14 +1,41 @@
 .user-page {
   h1 {
     color: red;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   h2 {
-    margin-bottom: 0;
+    margin-bottom: 10px;
+  }
+  p {
+    color: red;
+    margin-bottom: 30px;
   }
 }
 
+.more {
+  margin-left: 40px;
+}
+
+.bouton-unlock {
+  position: absolute;
+  bottom: 35px;
+  right: 10px;
+  background-color: red;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-align: center;
+  color: black;
+  transition: 0.4s;
+}
+.bouton-unlock:hover {
+  background-color: rgb(161, 7, 7);
+  color: #C6C6C6;
+}
+
 .list-group-item {
+  position: relative;
   margin-bottom: 15px;
   background-color: rgb(182, 175, 175);
+  padding-bottom: 10px;
 }
