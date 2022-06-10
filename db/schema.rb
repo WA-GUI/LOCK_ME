@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(version: 2022_06_09_094552) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "fleurs", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.integer "price"
