@@ -1,15 +1,15 @@
 
-<h1 class="text-center"><%= @service.name.upcase %></h1>
-<div class="d-flex flex-row space-between justify-content-center ">
+<h1 class="text-center" style="background-color:black; color:white; "><%= @service.name.upcase %></h1>
+<div class="d-flex flex-row space-between justify-content-center" style="background-color: black;">
 
-  <div class="d-flex p-3">
+  <div class="d-flex p-3" background-color=black>
    <%= image_tag "#{@service.photo}", size:"450x450", class: "picsdetails" %>
   </div>
 
   <div class="flex-column row justify-content-center align-items-center">
     <%= link_to "LOCK ME!", new_service_booking_path(@service), class: "btn btn-danger mb-4 button-size"%>
-    <h5>price: <strong><%= @service.price %>€<strong></h5>
-    <p><%= @service.description %></p>
+    <h5 style="color:white">price: <strong><%= @service.price %>€<strong></h5>
+    <p style="color:white"><%= @service.description %></p>
   </div>
 
 </div>
