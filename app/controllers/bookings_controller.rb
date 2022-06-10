@@ -9,7 +9,12 @@ class BookingsController < ApplicationController
     @service = Service.find(params[:service_id])
     @booking.user = current_user
     @booking.service = @service
-    @booking.save ? (redirect_to users_path(current_user)) : (render :new)
+    @booking.save ? (redirect_to resa_path(@service, @booking)) : (render :new)
+    # @booking.save ? (redirect_to users_path(current_user)) : (render :new)
+  end
+
+  def resa
+    @booking = Booking.find(params[:id])
   end
 
   def destroy

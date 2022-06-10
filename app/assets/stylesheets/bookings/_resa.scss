@@ -1,0 +1,33 @@
+#confirmation {
+  position: relative;
+  color: #950101;
+  padding-top: 30px;
+  text-align: center;
+  h1 {
+    font-size: 55px;
+  }
+}
+
+#confirm {
+  position: absolute;
+  left: 50%;
+  transform: translate(-112px, 100px);
+}
+
+#bouton-confirm {
+  background-color: red;
+  border-radius: 20px;
+  font-size: 33px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 25px 35px;
+  text-align: center;
+  color: black;
+  transition: 0.6s;
+}
+
+#bouton-confirm:hover {
+  background-color: rgb(161, 7, 7);
+  color: #C6C6C6;
+  box-shadow: 0px 0px 30px #950101;
+}

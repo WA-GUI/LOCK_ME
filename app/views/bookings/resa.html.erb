@@ -1,0 +1,9 @@
+<div class="bckg">
+  <br>
+  <div class="container" id="confirmation">
+    <h1>U <strong>LOCK ME</strong> for <strong><%= @booking.service.name %></strong> <br>On <em><%= @booking.date %></em> </h1>
+  </div>
+  <div class="bouton" id="confirm">
+      <%= link_to "CONFIRM", users_path, id: "bouton-confirm" %>
+  </div>
+</div>
